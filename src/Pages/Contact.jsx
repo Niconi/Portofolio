@@ -53,8 +53,8 @@ const ContactPage = () => {
       submitData.append('email', formData.email);
       submitData.append('message', formData.message);
       submitData.append('_subject', 'Pesan Baru dari Website Portfolio');
-      submitData.append('_captcha', 'false'); // Nonaktifkan captcha
-      submitData.append('_template', 'table'); // Format email sebagai tabel
+      submitData.append('_captcha', 'false');
+      submitData.append('_template', 'table');
 
       await axios.post(formSubmitUrl, submitData, {
         headers: {
@@ -66,7 +66,6 @@ const ContactPage = () => {
       Swal.fire({
         title: text.Contact.successTitle,
         text: text.Contact.successMessage,
-        icon: 'success',
         icon: 'success',
         confirmButtonColor: '#3B82F6',
         timer: 2000,
@@ -85,7 +84,6 @@ const ContactPage = () => {
           title: text.Contact.successTitle,
           text: text.Contact.successMessage,
           icon: 'success',
-          icon: 'success',
           confirmButtonColor: '#3B82F6',
           timer: 2000,
           timerProgressBar: true
@@ -100,7 +98,6 @@ const ContactPage = () => {
         Swal.fire({
           title: text.Contact.errorTitle,
           text: text.Contact.errorMessage,
-          icon: 'error',
           icon: 'error',
           confirmButtonColor: '#3B82F6'
         });
